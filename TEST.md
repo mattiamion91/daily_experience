@@ -25,3 +25,10 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M4 — Dettaglio e checklist › il dettaglio mostra tutte le informazioni e i dati tecnici
 - [✔] M4 — Dettaglio e checklist › la modale mostra l’attrezzatura e salva lo stato della checkbox
 - [✔] M4 — Dettaglio e checklist › la checklist salvata in precedenza risulta già spuntata
+
+## M5 — Pannello admin CRUD
+- [✔] M5 — Pannello admin CRUD › un utente normale vede accesso negato e può tornare alle esperienze
+- [✔] M5 — Pannello admin CRUD › l’admin vede il pannello con l’elenco delle esperienze
+- [✔] M5 — Pannello admin CRUD › l’admin crea un’esperienza compilando tutti i campi
+- [✔] M5 — Pannello admin CRUD › l’admin modifica un’esperienza e il cambiamento appare nella lista pubblica
+- [✔] M5 — Pannello admin CRUD › l’admin elimina un’esperienza solo dopo conferma

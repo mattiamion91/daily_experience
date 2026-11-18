@@ -71,6 +71,52 @@ export async function caricaEsperienza(id) {
   return data;
 }
 
+function normalizzaEsperienza(dati) {
+  return {
+    name: String(dati.name ?? '').trim(),
+    date: dati.date ?? '',
+    image_url: String(dati.image_url ?? '').trim(),
+    location: String(dati.location ?? '').trim(),
+    description: String(dati.description ?? '').trim(),
+    departure_time: dati.departure_time || null,
+    departure_place: String(dati.departure_place ?? '').trim(),
+    arrival_place: String(dati.arrival_place ?? '').trim(),
+    difficulty: dati.difficulty ?? 'facile',
+    duration_minutes: Number(dati.duration_minutes) || 0,
+    path_length_km: Number(dati.path_length_km) || 0,
+    elevation_gain_m: Number(dati.elevation_gain_m) || 0,
+  };
+}
+
+export async function creaEsperienza(dati) {
+  const { data, error } = await supabase
+    .from('weekend_experiences')
+    .insert(normalizzaEsperienza(dati))
+    .select()
+    .single();
+  if (error) throw new Error(error.message);
+  return data;
+}
+
+export async function aggiornaEsperienza(id, dati) {
+  const { data, error } = await supabase
+    .from('weekend_experiences')
+    .update(normalizzaEsperienza(dati))
+    .eq('id', id)
+    .select()
+    .single();
+  if (error) throw new Error(error.message);
+  return data;
+}
+
+export async function eliminaEsperienza(id) {
+  const { error } = await supabase
+    .from('weekend_experiences')
+    .delete()
+    .eq('id', id);
+  if (error) throw new Error(error.message);
+}
+
 export async function caricaChecklist(userId, experienceId) {
   const { data, error } = await supabase
     .from('weekend_checklists')

@@ -31,8 +31,8 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Aggiungi la sezione dati tecnici (difficoltà, durata, lunghezza percorso, dislivello positivo) e il bottone che apre la modale "Attrezzatura consigliata".
 - [✔] Implementa la checklist con checkbox persistenti, personale per utente ed esperienza, con feedback di salvataggio.
 
-## M5 — Pannello admin CRUD
-- [ ] Implementa la guardia di `/admin` basata su `weekend_profiles.role`, con accesso negato e redirect per gli utenti normali.
-- [ ] Crea la vista admin con elenco esperienze e form di creazione e modifica di tutti i campi, incluso l'URL dell'immagine.
-- [ ] Implementa aggiornamento e cancellazione tramite chiamate REST Supabase, con conferma e messaggi di esito.
-- [ ] Verifica che solo un admin possa scrivere (RLS) e che le modifiche appaiano nella lista delle esperienze.
+## M5 — Pannello admin CRUD ✔
+- [✔] Implementa la guardia di `/admin` basata su `weekend_profiles.role`, con accesso negato e redirect per gli utenti normali.
+- [✔] Crea la vista admin con elenco esperienze e form di creazione e modifica di tutti i campi, incluso l'URL dell'immagine.
+- [✔] Implementa aggiornamento e cancellazione tramite chiamate REST Supabase, con conferma e messaggi di esito.
+- [✔] Verifica che solo un admin possa scrivere (RLS) e che le modifiche appaiano nella lista delle esperienze.
