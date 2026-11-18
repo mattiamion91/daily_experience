@@ -53,3 +53,6 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 ## M11 — Caricamento esperienze dopo il login
 - [✔] M11 — Caricamento esperienze dopo il login › dopo il login le esperienze compaiono senza refresh
 - [✔] M11 — Caricamento esperienze dopo il login › dopo il login anche una rotta di dettaglio si carica senza refresh
+
+## M12 — Nessuna sottolineatura al passaggio sul titolo
+- [✔] M12 — Nessuna sottolineatura al passaggio sul titolo › il titolo dell’header resta senza sottolineatura in hover e il link funziona

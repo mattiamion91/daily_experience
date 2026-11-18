@@ -62,3 +62,7 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 ## M11 — Caricamento esperienze dopo il login ✔
 - [✔] Ricarica esperienze e dettaglio quando cambia l'utente autenticato, evitando la query anonima che restituisce zero righe a causa delle policy RLS.
 - [✔] Aggiungi un test end-to-end che faccia il login dalla modale e verifichi le esperienze senza refresh; controlla build e test delle milestone precedenti.
+
+## M12 — Nessuna sottolineatura al passaggio sul titolo ✔
+- [✔] Rimuovi l'effetto hover che sottolinea "Prossima Gita" nell'header, mantenendo il link cliccabile e l'accessibilità.
+- [✔] Aggiungi un test end-to-end che verifichi l'assenza della sottolineatura in hover; controlla build e test delle milestone precedenti.

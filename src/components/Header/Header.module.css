@@ -27,10 +27,6 @@
   text-decoration: none;
 }
 
-.brand:hover .title {
-  text-decoration: underline;
-}
-
 .identity {
   flex: 1 1 auto;
   min-width: 0;
