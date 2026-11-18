@@ -28,5 +28,9 @@ const ATTREZZATURA = {
 };
 
 export function attrezzaturaPer(esperienza) {
+  const suggerimenti = esperienza?.suggested_equipment;
+  if (Array.isArray(suggerimenti)) {
+    return suggerimenti.map((voce) => String(voce).trim()).filter(Boolean);
+  }
   return ATTREZZATURA[esperienza?.name] ?? [];
 }

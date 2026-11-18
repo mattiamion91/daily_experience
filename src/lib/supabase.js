@@ -76,6 +76,9 @@ export async function caricaEsperienza(identificativo) {
 }
 
 function normalizzaEsperienza(dati) {
+  const voci = dati.suggested_equipment;
+  const righe = Array.isArray(voci) ? voci : String(voci ?? '').split('\n');
+  const suggerimenti = righe.map((voce) => String(voce).trim()).filter(Boolean);
   return {
     name: String(dati.name ?? '').trim(),
     slug: dati.slug ? slugify(dati.slug) : slugify(dati.name),
@@ -87,6 +90,7 @@ function normalizzaEsperienza(dati) {
     departure_place: String(dati.departure_place ?? '').trim(),
     arrival_place: String(dati.arrival_place ?? '').trim(),
     difficulty: dati.difficulty ?? 'facile',
+    suggested_equipment: suggerimenti,
     duration_minutes: Number(dati.duration_minutes) || 0,
     path_length_km: Number(dati.path_length_km) || 0,
     elevation_gain_m: Number(dati.elevation_gain_m) || 0,

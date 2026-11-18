@@ -22,6 +22,9 @@ function ExperienceForm({ esperienza, onSubmit, onAnnulla, pending }) {
     ...VALORI_INIZIALI,
     ...(esperienza ?? {}),
     departure_time: esperienza?.departure_time?.slice(0, 5) ?? '',
+    suggested_equipment: Array.isArray(esperienza?.suggested_equipment)
+      ? esperienza.suggested_equipment.join('\n')
+      : String(esperienza?.suggested_equipment ?? ''),
   }));
   const anteprimaSlug = slugify(dati.slug || dati.name) || 'nome-esperienza';
 
@@ -95,6 +98,19 @@ function ExperienceForm({ esperienza, onSubmit, onAnnulla, pending }) {
         rows={3}
         value={dati.description}
         onChange={cambia('description')}
+      />
+
+      <label className={styles.label} htmlFor="admin-equipment">
+        Attrezzatura consigliata (una voce per riga)
+      </label>
+      <textarea
+        className={styles.input}
+        id="admin-equipment"
+        data-testid="admin-field-equipment"
+        rows={4}
+        placeholder={'Scarpe da trekking\nZaino 20 L\nBorraccia'}
+        value={dati.suggested_equipment}
+        onChange={cambia('suggested_equipment')}
       />
 
       <label className={styles.label} htmlFor="admin-departure-time">Orario di partenza</label>

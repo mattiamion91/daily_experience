@@ -16,7 +16,7 @@ Web app mobile-first per un gruppo di amici che organizza e segue gite e uscite 
 - Dettaglio esperienza con foto, nome, descrizione, data, orario di partenza, luogo di partenza e luogo di arrivo; l'URL mostra uno slug leggibile con il nome dell'esperienza e le vecchie URL con ID restano valide.
 - Pulsante "Torna a lista esperienze" nel dettaglio e logo dell'header cliccabile per tornare alla lista.
 - Sezione dati tecnici: difficoltà, durata esperienza, lunghezza percorso, dislivello positivo.
-- Modale "Attrezzatura consigliata" con checklist spuntabile, personale e unica per ogni utente.
+- Modale "Attrezzatura consigliata" con checklist spuntabile, personale e unica per ogni utente; l'elenco dei suggerimenti è modificabile dall'admin per ogni esperienza.
 - Pannello admin con CRUD completo delle esperienze tramite REST API Supabase, accessibile solo con ruolo `admin`.
 - Tre esperienze iniziali: Colli di Valdobbiadene, Lagorai, Alpago.
 
@@ -34,6 +34,7 @@ Vedi DESIGN.md
 - Stack: React + Vite, `react-router-dom`, `@supabase/supabase-js`.
 - Dati e persistenza: Supabase Auth, Postgres con RLS e API REST PostgREST tramite client Supabase. Nessun dato dell'app in localStorage; la sessione è gestita da Supabase.
 - Le migrazioni vengono applicate direttamente sul progetto collegato tramite MCP Supabase; non serve `db.sql`.
+- I suggerimenti di attrezzatura stanno nel campo `suggested_equipment` di `weekend_experiences`; le spunte personali restano in `weekend_checklists`.
 - Account demo creati via SQL (solo per collaudo): `admin@weekend.demo` / `Demo1234!` con ruolo admin, `user@weekend.demo` / `Demo1234!` con ruolo user.
 - Le immagini sono salvate come URL nel campo `image_url` e per la prima versione usano un placeholder; l'admin potrà sostituirle in seguito dal pannello.
 - Il pannello admin scrive sulle tabelle con le normali chiamate REST del client Supabase: la sicurezza è affidata alle policy RLS che verificano il ruolo admin.

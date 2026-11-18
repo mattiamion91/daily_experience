@@ -53,3 +53,8 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Aggiungi il pulsante "Torna a lista esperienze" nella pagina di dettaglio, anche in caso di errore, con `data-testid` dedicato.
 - [✔] Rendi cliccabile il logo dell'header: al click torna alla lista esperienze, mantenendo icona, testo e accessibilità.
 - [✔] Aggiorna README.md e verifica build e test delle milestone precedenti.
+
+## M10 — Attrezzatura modificabile e card desktop ✔
+- [✔] Aggiungi `suggested_equipment` a `weekend_experiences` con i suggerimenti attuali, esponilo nelle API e mantieni il fallback per i vecchi dati.
+- [✔] Permetti all'admin di aggiungere e modificare l'attrezzatura consigliata dal form; la modale del dettaglio legge i suggerimenti dal database.
+- [✔] Correggi il layout desktop delle card: immagine dentro la sua colonna e card della stessa altezza; verifica build e test.
