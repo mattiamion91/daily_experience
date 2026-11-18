@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { useParams } from 'react-router-dom';
+import { useNavigate, useParams } from 'react-router-dom';
 import { useEsperienza } from '../hooks/useEsperienza.js';
 import { useAuth } from '../context/AuthContext.jsx';
 import EquipmentModal from '../features/checklist/EquipmentModal.jsx';
@@ -9,9 +9,11 @@ import styles from '../features/experiences/ExperienceDetail.module.css';
 
 function ExperienceDetailPage() {
   const { id } = useParams();
+  const navigate = useNavigate();
   const { user } = useAuth();
   const { esperienza, loading, errore } = useEsperienza(id);
   const [modaleAperta, setModaleAperta] = useState(false);
+  const tornaAllaLista = () => navigate('/');
 
   if (loading) {
     return (
@@ -28,6 +30,9 @@ function ExperienceDetailPage() {
   if (errore) {
     return (
       <section className={page.page} data-testid="experience-detail-page">
+        <button className={styles.back} type="button" onClick={tornaAllaLista} data-testid="back-to-list-button">
+          Torna a lista esperienze
+        </button>
         <h2 className={page.title}>Dettaglio esperienza</h2>
         <p className={page.text} role="alert" data-testid="detail-error">
           {errore}
@@ -41,6 +46,9 @@ function ExperienceDetailPage() {
 
   return (
     <section className={styles.page} data-testid="experience-detail-page">
+      <button className={styles.back} type="button" onClick={tornaAllaLista} data-testid="back-to-list-button">
+        Torna a lista esperienze
+      </button>
       <img
         className={styles.image}
         src={esperienza.image_url}

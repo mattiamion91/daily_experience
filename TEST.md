@@ -38,3 +38,8 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M7 — Slug e login essenziale › una vecchia URL con ID continua ad aprire il dettaglio
 - [✔] M7 — Slug e login essenziale › il form admin genera lo slug dal nome
 - [✔] M7 — Slug e login essenziale › la modale di login non mostra più gli account demo
+
+## M9 — Ritorno alla lista esperienze
+- [✔] M9 — Ritorno alla lista esperienze › il pulsante nel dettaglio torna alla lista esperienze
+- [✔] M9 — Ritorno alla lista esperienze › il pulsante torna alla lista anche se il dettaglio non si carica
+- [✔] M9 — Ritorno alla lista esperienze › il logo dell’header torna alla lista esperienze

@@ -48,3 +48,8 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 
 ## M8 — Correzioni dalla verifica finale ✔
 - [✔] Correggi il test che fallisce: M1.spec.js › la rotta di dettaglio mostra l’identificativo dell’esperienza
+
+## M9 — Ritorno alla lista esperienze ✔
+- [✔] Aggiungi il pulsante "Torna a lista esperienze" nella pagina di dettaglio, anche in caso di errore, con `data-testid` dedicato.
+- [✔] Rendi cliccabile il logo dell'header: al click torna alla lista esperienze, mantenendo icona, testo e accessibilità.
+- [✔] Aggiorna README.md e verifica build e test delle milestone precedenti.

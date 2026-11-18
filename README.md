@@ -14,6 +14,7 @@ Web app mobile-first per un gruppo di amici che organizza e segue gite e uscite 
 - Registrazione con email, password, conferma password e checkbox "Mostra password" sia in login sia in registrazione.
 - Lista delle esperienze ordinata dalla data più prossima a oggi alla più lontana; ogni card mostra nome, data, foto anteprima e luogo.
 - Dettaglio esperienza con foto, nome, descrizione, data, orario di partenza, luogo di partenza e luogo di arrivo; l'URL mostra uno slug leggibile con il nome dell'esperienza e le vecchie URL con ID restano valide.
+- Pulsante "Torna a lista esperienze" nel dettaglio e logo dell'header cliccabile per tornare alla lista.
 - Sezione dati tecnici: difficoltà, durata esperienza, lunghezza percorso, dislivello positivo.
 - Modale "Attrezzatura consigliata" con checklist spuntabile, personale e unica per ogni utente.
 - Pannello admin con CRUD completo delle esperienze tramite REST API Supabase, accessibile solo con ruolo `admin`.
