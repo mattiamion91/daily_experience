@@ -39,3 +39,4 @@ Vedi DESIGN.md
 - Le immagini sono salvate come URL nel campo `image_url` e per la prima versione usano un placeholder; l'admin potrà sostituirle in seguito dal pannello.
 - Il pannello admin scrive sulle tabelle con le normali chiamate REST del client Supabase: la sicurezza è affidata alle policy RLS che verificano il ruolo admin.
 - Test end-to-end Playwright in `.agent/tests/e2e`, uno per milestone, elementi interattivi identificati con `data-testid`.
+- Deploy di produzione: https://prossima-gita.netlify.app (sito Netlify `prossima-gita`). Le variabili `VITE_SUPABASE_URL` e `VITE_SUPABASE_ANON_KEY` sono configurate nel sito Netlify, non nel repository; `public/_redirects` abilita le rotte dell'app lato client.
