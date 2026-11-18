@@ -43,7 +43,6 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M9 — Ritorno alla lista esperienze › il pulsante nel dettaglio torna alla lista esperienze
 - [✔] M9 — Ritorno alla lista esperienze › il pulsante torna alla lista anche se il dettaglio non si carica
 - [✔] M9 — Ritorno alla lista esperienze › il logo dell’header torna alla lista esperienze
-- [✔] diagnosi desktop
 
 ## M10 — Attrezzatura modificabile e card desktop
 - [✔] M10 — Attrezzatura modificabile e card desktop › l’admin aggiunge l’attrezzatura consigliata a una nuova esperienza
