@@ -13,7 +13,7 @@ import page from '../styles/page.module.css';
 import styles from '../features/admin/Admin.module.css';
 
 function AdminPage() {
-  const { role } = useAuth();
+  const { role, user } = useAuth();
   const [esperienze, setEsperienze] = useState([]);
   const [loading, setLoading] = useState(true);
   const [errore, setErrore] = useState('');
@@ -99,6 +99,15 @@ function AdminPage() {
       setPending(false);
     }
   };
+
+  if (!user) {
+    return (
+      <section className={page.page} data-testid="admin-page">
+        <h2 className={page.title}>Pannello admin</h2>
+        <p className={styles.intro}>Accedi per gestire le esperienze del gruppo.</p>
+      </section>
+    );
+  }
 
   if (role !== 'admin') {
     return (

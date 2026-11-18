@@ -7,10 +7,12 @@
   padding: var(--space-4);
   background: rgb(31 41 55 / 62%);
   backdrop-filter: blur(2px);
+  pointer-events: none;
 }
 
 .dialog {
   position: relative;
+  pointer-events: auto;
   width: 100%;
   max-width: 420px;
   max-height: calc(100vh - 2 * var(--space-4));

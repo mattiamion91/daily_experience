@@ -36,3 +36,7 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Crea la vista admin con elenco esperienze e form di creazione e modifica di tutti i campi, incluso l'URL dell'immagine.
 - [✔] Implementa aggiornamento e cancellazione tramite chiamate REST Supabase, con conferma e messaggi di esito.
 - [✔] Verifica che solo un admin possa scrivere (RLS) e che le modifiche appaiano nella lista delle esperienze.
+
+## M6 — Correzioni dalla verifica finale ✔
+- [✔] Correggi il test che fallisce: M1.spec.js › la rotta admin mostra il pannello
+- [✔] Correggi il test che fallisce: M1.spec.js › una rotta sconosciuta mostra il fallback e torna alla home
