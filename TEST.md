@@ -49,3 +49,7 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M10 — Attrezzatura modificabile e card desktop › l’admin modifica l’attrezzatura consigliata di un’esperienza esistente
 - [✔] M10 — Attrezzatura modificabile e card desktop › la modale mostra l’attrezzatura salvata per quell’esperienza
 - [✔] M10 — Attrezzatura modificabile e card desktop › in desktop le card hanno la stessa dimensione e l’immagine non copre il testo
+
+## M11 — Caricamento esperienze dopo il login
+- [✔] M11 — Caricamento esperienze dopo il login › dopo il login le esperienze compaiono senza refresh
+- [✔] M11 — Caricamento esperienze dopo il login › dopo il login anche una rotta di dettaglio si carica senza refresh

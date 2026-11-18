@@ -58,3 +58,7 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Aggiungi `suggested_equipment` a `weekend_experiences` con i suggerimenti attuali, esponilo nelle API e mantieni il fallback per i vecchi dati.
 - [✔] Permetti all'admin di aggiungere e modificare l'attrezzatura consigliata dal form; la modale del dettaglio legge i suggerimenti dal database.
 - [✔] Correggi il layout desktop delle card: immagine dentro la sua colonna e card della stessa altezza; verifica build e test.
+
+## M11 — Caricamento esperienze dopo il login ✔
+- [✔] Ricarica esperienze e dettaglio quando cambia l'utente autenticato, evitando la query anonima che restituisce zero righe a causa delle policy RLS.
+- [✔] Aggiungi un test end-to-end che faccia il login dalla modale e verifichi le esperienze senza refresh; controlla build e test delle milestone precedenti.
