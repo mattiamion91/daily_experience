@@ -20,3 +20,8 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M3 — Lista esperienze › il click su una card apre il dettaglio dell’esperienza
 - [✔] M3 — Lista esperienze › mostra uno stato vuoto quando non ci sono esperienze
 - [✔] M3 — Lista esperienze › mostra un errore se il caricamento fallisce
+
+## M4 — Dettaglio esperienza e checklist personale
+- [✔] M4 — Dettaglio e checklist › il dettaglio mostra tutte le informazioni e i dati tecnici
+- [✔] M4 — Dettaglio e checklist › la modale mostra l’attrezzatura e salva lo stato della checkbox
+- [✔] M4 — Dettaglio e checklist › la checklist salvata in precedenza risulta già spuntata

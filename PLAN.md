@@ -25,11 +25,11 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Crea la pagina `/` con card ordinate per data crescente contenenti nome, data, foto anteprima e luogo.
 - [✔] Gestisci caricamento, stato vuoto ed errori; collega il click della card alla rotta di dettaglio con `data-testid` dedicati.
 
-## M4 — Dettaglio esperienza e checklist personale
-- [ ] Crea `weekend_checklists` con RLS per singolo utente e inserisci l'attrezzatura di default per le 3 esperienze.
-- [ ] Crea la pagina `/esperienze/:id` con foto, nome, descrizione, data, orario di partenza, luogo di partenza e luogo di arrivo.
-- [ ] Aggiungi la sezione dati tecnici (difficoltà, durata, lunghezza percorso, dislivello positivo) e il bottone che apre la modale "Attrezzatura consigliata".
-- [ ] Implementa la checklist con checkbox persistenti, personale per utente ed esperienza, con feedback di salvataggio.
+## M4 — Dettaglio esperienza e checklist personale ✔
+- [✔] Crea `weekend_checklists` con RLS per singolo utente e inserisci l'attrezzatura di default per le 3 esperienze.
+- [✔] Crea la pagina `/esperienze/:id` con foto, nome, descrizione, data, orario di partenza, luogo di partenza e luogo di arrivo.
+- [✔] Aggiungi la sezione dati tecnici (difficoltà, durata, lunghezza percorso, dislivello positivo) e il bottone che apre la modale "Attrezzatura consigliata".
+- [✔] Implementa la checklist con checkbox persistenti, personale per utente ed esperienza, con feedback di salvataggio.
 
 ## M5 — Pannello admin CRUD
 - [ ] Implementa la guardia di `/admin` basata su `weekend_profiles.role`, con accesso negato e redirect per gli utenti normali.

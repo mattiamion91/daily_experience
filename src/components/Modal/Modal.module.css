@@ -10,6 +10,7 @@
 }
 
 .dialog {
+  position: relative;
   width: 100%;
   max-width: 420px;
   max-height: calc(100vh - 2 * var(--space-4));
@@ -18,6 +19,20 @@
   border-radius: var(--radius-lg);
   background: var(--color-surface);
   box-shadow: var(--shadow-modal);
+}
+
+.close {
+  position: absolute;
+  top: var(--space-2);
+  right: var(--space-2);
+  width: 36px;
+  height: 36px;
+  border: 0;
+  border-radius: var(--radius-full);
+  background: var(--color-surface-alt);
+  color: var(--color-text);
+  font-size: var(--text-xl);
+  line-height: 1;
 }
 
 @media (min-width: 768px) {

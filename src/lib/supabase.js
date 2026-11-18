@@ -60,6 +60,41 @@ export async function caricaEsperienze() {
   return data ?? [];
 }
 
+export async function caricaEsperienza(id) {
+  const { data, error } = await supabase
+    .from('weekend_experiences')
+    .select('*')
+    .eq('id', id)
+    .maybeSingle();
+  if (error) throw new Error(error.message);
+  if (!data) throw new Error('Esperienza non trovata.');
+  return data;
+}
+
+export async function caricaChecklist(userId, experienceId) {
+  const { data, error } = await supabase
+    .from('weekend_checklists')
+    .select('*')
+    .eq('user_id', userId)
+    .eq('experience_id', experienceId)
+    .order('equipment', { ascending: true });
+  if (error) throw new Error(error.message);
+  return data ?? [];
+}
+
+export async function salvaChecklistItem({ userId, experienceId, equipment, packed }) {
+  const { data, error } = await supabase
+    .from('weekend_checklists')
+    .upsert(
+      { user_id: userId, experience_id: experienceId, equipment, packed },
+      { onConflict: 'user_id,experience_id,equipment' },
+    )
+    .select()
+    .single();
+  if (error) throw new Error(error.message);
+  return data;
+}
+
 export function erroreAuth(messaggio) {
   if (!messaggio) return 'Si è verificato un errore. Riprova.';
   if (/invalid login credentials/i.test(messaggio)) return 'Email o password non corretti.';
