@@ -14,11 +14,11 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Definisci le rotte `/`, `/esperienze/:id` e `/admin` con pagine segnaposto e le cartelle modulo/componenti come punti di estensione.
 - [✔] Aggiungi `data-testid` alle regioni chiave e verifica build e avvio senza errori.
 
-## M2 — Autenticazione con Supabase
-- [ ] Crea `weekend_profiles` con trigger su `auth.users`, policy RLS e colonna `role`; crea via SQL gli account demo admin e user.
-- [ ] Implementa la modale di login con email, password, checkbox "Mostra password" e link "Non sei utente, registrati qui".
-- [ ] Implementa la modale di registrazione con email, password, conferma password, checkbox "Mostra password" e validazione.
-- [ ] Mostra la modale di login come prima cosa per chi non è autenticato; gestisci sessione persistente, stato di caricamento e logout.
+## M2 — Autenticazione con Supabase ✔
+- [✔] Crea `weekend_profiles` con trigger su `auth.users`, policy RLS e colonna `role`; crea via SQL gli account demo admin e user.
+- [✔] Implementa la modale di login con email, password, checkbox "Mostra password" e link "Non sei utente, registrati qui".
+- [✔] Implementa la modale di registrazione con email, password, conferma password, checkbox "Mostra password" e validazione.
+- [✔] Mostra la modale di login come prima cosa per chi non è autenticato; gestisci sessione persistente, stato di caricamento e logout.
 
 ## M3 — Esperienze: tabella, seed e lista card
 - [ ] Crea `weekend_experiences` con RLS di lettura per gli utenti autenticati e inserisci le 3 esperienze (Colli di Valdobbiadene, Lagorai, Alpago) con URL placeholder e date future.

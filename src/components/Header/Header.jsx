@@ -1,6 +1,20 @@
+import { useState } from 'react';
+import { useAuth } from '../../context/AuthContext.jsx';
 import styles from './Header.module.css';
 
 function Header() {
+  const { user, signOut } = useAuth();
+  const [errore, setErrore] = useState('');
+
+  const handleLogout = async () => {
+    setErrore('');
+    try {
+      await signOut();
+    } catch {
+      setErrore('Non è stato possibile uscire. Riprova.');
+    }
+  };
+
   return (
     <header className={styles.header} data-testid="app-header">
       <div className={styles.inner}>
@@ -10,10 +24,25 @@ function Header() {
             <circle cx="12" cy="9" r="2.5" fill="currentColor" stroke="none" />
           </svg>
         </span>
-        <div>
+        <div className={styles.identity}>
           <p className={styles.eyebrow}>Il tuo weekend, con gli amici</p>
           <h1 className={styles.title}>Prossima Gita</h1>
         </div>
+        {user && (
+          <div className={styles.account}>
+            <span className={styles.email} data-testid="user-email">
+              {user.email}
+            </span>
+            <button className={styles.logout} type="button" onClick={handleLogout} data-testid="logout-button">
+              Esci
+            </button>
+            {errore && (
+              <span className={styles.errore} role="alert">
+                {errore}
+              </span>
+            )}
+          </div>
+        )}
       </div>
     </header>
   );

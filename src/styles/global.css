@@ -83,3 +83,9 @@ img {
   display: block;
   max-width: 100%;
 }
+
+.stato-caricamento {
+  margin: var(--space-8) auto;
+  text-align: center;
+  color: var(--color-muted);
+}
