@@ -1,4 +1,5 @@
 import { useState } from 'react';
+import { slugify } from '../../lib/slug.js';
 import styles from './Admin.module.css';
 
 const VALORI_INIZIALI = {
@@ -22,6 +23,7 @@ function ExperienceForm({ esperienza, onSubmit, onAnnulla, pending }) {
     ...(esperienza ?? {}),
     departure_time: esperienza?.departure_time?.slice(0, 5) ?? '',
   }));
+  const anteprimaSlug = slugify(dati.slug || dati.name) || 'nome-esperienza';
 
   const cambia = (campo) => (event) => {
     setDati((precedenti) => ({ ...precedenti, [campo]: event.target.value }));
@@ -48,6 +50,9 @@ function ExperienceForm({ esperienza, onSubmit, onAnnulla, pending }) {
         value={dati.name}
         onChange={cambia('name')}
       />
+      <p className={styles.stato} data-testid="admin-slug-preview">
+        URL: /esperienze/{anteprimaSlug}
+      </p>
 
       <label className={styles.label} htmlFor="admin-date">Data</label>
       <input

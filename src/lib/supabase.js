@@ -1,4 +1,5 @@
 import { createClient } from '@supabase/supabase-js';
+import { slugify } from './slug.js';
 
 const url = import.meta.env.VITE_SUPABASE_URL;
 const anonKey = import.meta.env.VITE_SUPABASE_ANON_KEY;
@@ -60,11 +61,14 @@ export async function caricaEsperienze() {
   return data ?? [];
 }
 
-export async function caricaEsperienza(id) {
+const UUID = /^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$/i;
+
+export async function caricaEsperienza(identificativo) {
+  const colonna = UUID.test(identificativo) ? 'id' : 'slug';
   const { data, error } = await supabase
     .from('weekend_experiences')
     .select('*')
-    .eq('id', id)
+    .eq(colonna, identificativo)
     .maybeSingle();
   if (error) throw new Error(error.message);
   if (!data) throw new Error('Esperienza non trovata.');
@@ -74,6 +78,7 @@ export async function caricaEsperienza(id) {
 function normalizzaEsperienza(dati) {
   return {
     name: String(dati.name ?? '').trim(),
+    slug: dati.slug ? slugify(dati.slug) : slugify(dati.name),
     date: dati.date ?? '',
     image_url: String(dati.image_url ?? '').trim(),
     location: String(dati.location ?? '').trim(),

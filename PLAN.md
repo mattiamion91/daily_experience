@@ -40,3 +40,8 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 ## M6 — Correzioni dalla verifica finale ✔
 - [✔] Correggi il test che fallisce: M1.spec.js › la rotta admin mostra il pannello
 - [✔] Correggi il test che fallisce: M1.spec.js › una rotta sconosciuta mostra il fallback e torna alla home
+
+## M7 — Slug leggibile e modale di login essenziale ✔
+- [✔] Aggiungi la colonna `slug` a `weekend_experiences` con valori generati dal nome e mantieni valide le vecchie URL con ID.
+- [✔] Usa lo slug nelle card e nella pagina di dettaglio, generandolo automaticamente dal form admin.
+- [✔] Rimuovi il riquadro degli account demo dalla modale di login e verifica build e test.

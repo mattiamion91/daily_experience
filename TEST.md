@@ -32,3 +32,9 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M5 — Pannello admin CRUD › l’admin crea un’esperienza compilando tutti i campi
 - [✔] M5 — Pannello admin CRUD › l’admin modifica un’esperienza e il cambiamento appare nella lista pubblica
 - [✔] M5 — Pannello admin CRUD › l’admin elimina un’esperienza solo dopo conferma
+
+## M7 — Slug leggibile e modale di login essenziale
+- [✔] M7 — Slug e login essenziale › il link della card mostra il nome dell’esperienza nella URL
+- [✔] M7 — Slug e login essenziale › una vecchia URL con ID continua ad aprire il dettaglio
+- [✔] M7 — Slug e login essenziale › il form admin genera lo slug dal nome
+- [✔] M7 — Slug e login essenziale › la modale di login non mostra più gli account demo

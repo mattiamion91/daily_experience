@@ -78,13 +78,6 @@ function LoginModal({ onSubmit, onSwitchToRegister, pending, error }) {
         </button>
         .
       </p>
-
-      <div className={styles.hint} data-testid="demo-credentials">
-        <p className={styles.hintTitle}>Account demo</p>
-        <p>admin@weekend.demo — admin</p>
-        <p>user@weekend.demo — utente</p>
-        <p>Password: Demo1234!</p>
-      </div>
     </Modal>
   );
 }

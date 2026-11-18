@@ -4,10 +4,11 @@ import styles from './ExperienceCard.module.css';
 
 function ExperienceCard({ esperienza }) {
   const immagine = esperienza.image_url || 'https://placehold.co/800x500/E5E7EB/6B7280?text=Esperienza';
+  const identificativo = esperienza.slug || esperienza.id;
 
   return (
     <article className={styles.card} data-testid="experience-card">
-      <Link className={styles.link} to={`/esperienze/${esperienza.id}`} data-testid="experience-card-link">
+      <Link className={styles.link} to={`/esperienze/${identificativo}`} data-testid="experience-card-link">
         <div className={styles.imageWrapper}>
           <img
             className={styles.image}
