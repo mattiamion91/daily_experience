@@ -16,7 +16,11 @@ function ExperienceDetailPage() {
   if (loading) {
     return (
       <section className={page.page} data-testid="experience-detail-page">
+        <h2 className={page.title}>Dettaglio esperienza</h2>
         <p className={page.text}>Caricamento dell'esperienza…</p>
+        <p className={page.text} data-testid="detail-identifier">
+          {id}
+        </p>
       </section>
     );
   }
@@ -27,6 +31,9 @@ function ExperienceDetailPage() {
         <h2 className={page.title}>Dettaglio esperienza</h2>
         <p className={page.text} role="alert" data-testid="detail-error">
           {errore}
+        </p>
+        <p className={page.text} data-testid="detail-identifier">
+          {id}
         </p>
       </section>
     );
@@ -44,6 +51,9 @@ function ExperienceDetailPage() {
         <h2 className={styles.title} data-testid="detail-name">
           {esperienza.name}
         </h2>
+        <p className={page.text} data-testid="detail-identifier">
+          {id}
+        </p>
         <p className={styles.description} data-testid="detail-description">
           {esperienza.description}
         </p>
