@@ -1,0 +1,58 @@
+.header {
+  position: sticky;
+  top: 0;
+  z-index: 10;
+  background: var(--color-primary);
+  color: #fff;
+  box-shadow: 0 2px 8px rgb(31 41 55 / 18%);
+}
+
+.inner {
+  display: flex;
+  align-items: center;
+  gap: var(--space-3);
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  padding: var(--space-3) var(--space-4);
+}
+
+.mark {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  flex: 0 0 40px;
+  border-radius: var(--radius-md);
+  background: rgb(255 255 255 / 18%);
+}
+
+.mark svg {
+  width: 24px;
+  height: 24px;
+  color: var(--color-tertiary);
+}
+
+.eyebrow {
+  margin: 0;
+  font-size: var(--text-xs);
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  opacity: 0.85;
+}
+
+.title {
+  margin: 0;
+  font-size: var(--text-xl);
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .inner {
+    padding: var(--space-4) var(--space-6);
+  }
+
+  .title {
+    font-size: var(--text-2xl);
+  }
+}

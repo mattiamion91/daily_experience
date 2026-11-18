@@ -1,0 +1,16 @@
+.page {
+  display: grid;
+  gap: var(--space-3);
+}
+
+.title {
+  margin: 0;
+  color: var(--color-primary-dark);
+  font-size: var(--text-2xl);
+  line-height: 1.2;
+}
+
+.text {
+  margin: 0;
+  color: var(--color-muted);
+}
