@@ -51,6 +51,15 @@ export async function getRole(userId) {
   return data?.role ?? 'user';
 }
 
+export async function caricaEsperienze() {
+  const { data, error } = await supabase
+    .from('weekend_experiences')
+    .select('*')
+    .order('date', { ascending: true });
+  if (error) throw new Error(error.message);
+  return data ?? [];
+}
+
 export function erroreAuth(messaggio) {
   if (!messaggio) return 'Si è verificato un errore. Riprova.';
   if (/invalid login credentials/i.test(messaggio)) return 'Email o password non corretti.';

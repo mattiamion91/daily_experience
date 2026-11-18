@@ -14,3 +14,9 @@ Elenco dei test e2e, aggiornato dal loop a ogni esecuzione: non modificarlo a ma
 - [✔] M2 — Autenticazione › il link porta alla registrazione con conferma password e mostra password
 - [✔] M2 — Autenticazione › la registrazione segnala password diverse
 - [✔] M2 — Autenticazione › una sessione già presente mantiene l’utente autenticato
+
+## M3 — Esperienze: tabella, seed e lista card
+- [✔] M3 — Lista esperienze › mostra tre card ordinate per data con nome, foto e luogo
+- [✔] M3 — Lista esperienze › il click su una card apre il dettaglio dell’esperienza
+- [✔] M3 — Lista esperienze › mostra uno stato vuoto quando non ci sono esperienze
+- [✔] M3 — Lista esperienze › mostra un errore se il caricamento fallisce

@@ -20,10 +20,10 @@ Stati delle task (cambiali con `node .agent/loop.mjs task <n> inizia|fatta|error
 - [✔] Implementa la modale di registrazione con email, password, conferma password, checkbox "Mostra password" e validazione.
 - [✔] Mostra la modale di login come prima cosa per chi non è autenticato; gestisci sessione persistente, stato di caricamento e logout.
 
-## M3 — Esperienze: tabella, seed e lista card
-- [ ] Crea `weekend_experiences` con RLS di lettura per gli utenti autenticati e inserisci le 3 esperienze (Colli di Valdobbiadene, Lagorai, Alpago) con URL placeholder e date future.
-- [ ] Crea la pagina `/` con card ordinate per data crescente contenenti nome, data, foto anteprima e luogo.
-- [ ] Gestisci caricamento, stato vuoto ed errori; collega il click della card alla rotta di dettaglio con `data-testid` dedicati.
+## M3 — Esperienze: tabella, seed e lista card ✔
+- [✔] Crea `weekend_experiences` con RLS di lettura per gli utenti autenticati e inserisci le 3 esperienze (Colli di Valdobbiadene, Lagorai, Alpago) con URL placeholder e date future.
+- [✔] Crea la pagina `/` con card ordinate per data crescente contenenti nome, data, foto anteprima e luogo.
+- [✔] Gestisci caricamento, stato vuoto ed errori; collega il click della card alla rotta di dettaglio con `data-testid` dedicati.
 
 ## M4 — Dettaglio esperienza e checklist personale
 - [ ] Crea `weekend_checklists` con RLS per singolo utente e inserisci l'attrezzatura di default per le 3 esperienze.
